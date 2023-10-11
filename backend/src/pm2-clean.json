@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "script": "clean.mjs",
+      "watch": true,
+      "watch_delay": 3000,
+      "instances": 1,
+      "cron_restart": "*/2 * * * *",
+      "ignore_watch": [
+        "node_modules",
+        "files"
+      ],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    }
+  ],
+  "ignore_watch": [
+    "node_modules",
+    "files"
+  ],
+  "watch_options": {
+    "followSymlinks": false
+  }
+}

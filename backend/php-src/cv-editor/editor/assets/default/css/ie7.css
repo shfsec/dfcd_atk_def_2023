@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+select.select-style{
+	display:block !important;
+	width:auto;
+	margin-top:14px;
+	margin-left:30px;
+}
+.box_filter_content select.select-style{
+	width:150px;
+}
+.input_search_all{
+	width:403px !important;
+}
+.drop_filter_top{
+	width:120px !important;
+}
+.col-xs-3{
+	width:22%;
+	padding:0px !important;
+	margin:0px !important;
+}
+.dropdown_box{
+	z-index:1000;
+}

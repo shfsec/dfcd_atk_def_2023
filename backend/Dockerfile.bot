@@ -1,0 +1,14 @@
+FROM mcr.microsoft.com/playwright:v1.38.0-focal
+
+RUN apt-get update -y && apt install -y tzdata
+ENV TZ Asia/Ho_Chi_Minh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN npm install --omit=dev --force -g npm && npm install --omit=dev --force -g yarn
+
+WORKDIR /opt
+COPY ./bot-src/package.json /opt/
+
+RUN yarn add --production --no-lockfile --verbose pm2
+# RUN yarn install --production --no-lockfile
+# RUN npm install --omit=dev --loglevel verbose

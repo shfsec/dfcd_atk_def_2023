@@ -1,0 +1,50 @@
+{
+  "apps": [
+    {
+      "script": "bot.mjs",
+      "watch": true,
+      "watch_delay": 3000,
+      "restart_delay": 3000,
+      "instances": 1,
+      "ignore_watch": [
+        "node_modules"
+      ],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    },
+    {
+      "script": "play.mjs",
+      "watch": true,
+      "watch_delay": 3000,
+      "restart_delay": 3000,
+      "instances": 1,
+      "ignore_watch": [
+        "node_modules"
+      ],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    },
+    {
+      "script": "flagserver.mjs",
+      "watch": true,
+      "watch_delay": 3000,
+      "restart_delay": 3000,
+      "instances": 1,
+      "ignore_watch": [
+        "node_modules"
+      ],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    }
+  ],
+  "restart_delay": 3000,
+  "ignore_watch": [
+    "node_modules"
+  ],
+  "watch_options": {
+    "followSymlinks": false
+  }
+}

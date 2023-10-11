@@ -1,0 +1,22 @@
+# Ignore everything
+*
+
+# Allow files and directories
+!/Dockerfile.node
+!/Dockerfile.php
+!/package.json
+!**/package.json
+!bot-src/package.json
+
+#!/src
+
+# Ignore unnecessary files inside allowed directories
+# This should go after the allowed directories
+**/*~
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+/node_modules
+**/node_modules
+node_modules/
+node_modules/**

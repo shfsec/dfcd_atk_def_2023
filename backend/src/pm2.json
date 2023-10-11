@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "script": "server.mjs",
+      "watch": true,
+      "watch_delay": 3000,
+      "max_memory_restart": "600M",
+      "ignore_watch": [
+        "node_modules",
+        "files"
+      ],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    }
+  ],
+  "ignore_watch": [
+    "node_modules",
+    "files"
+  ],
+  "watch_options": {
+    "followSymlinks": false
+  }
+}

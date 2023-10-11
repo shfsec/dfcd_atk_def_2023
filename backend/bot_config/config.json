@@ -1,0 +1,6 @@
+{
+  "SERVICE_ID": "1",
+  "SERVER_URL": "http://host.docker.internal:8080",
+  "TOKEN": "",
+  "TESTRUN": true
+}

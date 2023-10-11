@@ -1,0 +1,562 @@
+/* Cvpro 05 */
+.cvp-content.five {
+    width: 800px;
+    height: auto;
+    color: #333333;
+    padding: 0px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+}
+
+.five .red-part {
+    width: 100%;
+    border-right: 20px solid #dd3f57;
+    height: auto;
+    padding: 40px 0 0;
+}
+
+.five .list-box .cvp-box {
+    padding-top: 0;
+}
+
+.five .list-box .cvp-box:first-child {
+    padding-top: 10px;
+}
+
+.five .cv-left {
+    width: 240px;
+    float: left;
+}
+
+.five .cv-right {
+    width: 540px;
+    float: left;
+    padding-right: 20px;
+}
+
+.five .avatar-user {
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 20px;
+    border-radius: 50%;
+}
+
+.five .img-ava {
+    border-radius: 50%;
+    /*border: 6px solid #dd3f57;*/
+} 
+ 
+.five .lh24 {
+    line-height: 24px; 
+}
+
+.five .user-name {
+    color: #dd3f57;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 5px;
+}
+
+.five .user-job {
+    color: #999999;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.five .tb-info .fa {
+    font-size: 14px;
+    color: #dd3f57;
+    width: 20px;
+    float: left;
+    position: relative;
+    top: 2px;
+}
+
+.five .tb-info td {
+    padding: 5px 0;
+    word-break: break-all;
+    vertical-align: top;
+}
+
+.five .tb-info tr td:first-child > span {
+    width: 100px;
+    float: left;
+}
+
+.five .tb-info tr td:nth-child(2) > span {
+    width: 220px;
+    float: left;
+}
+
+.five .tb-info tr td:nth-child(3) > span {
+    width: 130px;
+    float: left;
+}
+
+.five .tb-info tr td:first-child {
+    width: 125px;
+    float: left;
+}
+
+.five .tb-info tr td:nth-child(2) {
+    width: 240px;
+}
+/*.five .tb-info tr:nth-child(2) td:nth-child(2) {
+    width: 290px;
+}*/
+
+.five .tb-info {
+    margin-top: 13px;
+}
+
+.five .txt-intro {
+    font-size: 16px;
+    color: #333333;
+    margin-top: 40px;
+}
+
+.five .div-title {
+    margin-right: 80px;
+    position: relative;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 700;
+    text-align: right;
+    padding-top: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.five .red-part .div-title {
+    color: #dd3f57;
+}
+
+.five .icon-title {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    right: -60px;
+    top: 0;
+}
+
+.five .red-part .icon-title {
+    background-color: #dd3f57;
+}
+
+.five .mt25 {
+    margin-top: 25px;
+}
+
+.five .ml20 {
+    margin-left: 20px;
+}
+
+.five .mr20 {
+    margin-right: 20px;
+}
+
+.five .div-subject {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.five .box-content {
+    position: relative;
+    left: -40px;
+    padding-left: 40px;
+    border-left: 1px solid #000;
+}
+
+.five .red-part .box-content {
+    border-left: 1px solid #dd3f57;
+}
+
+.five .mt50 {
+    margin-top: 50px;
+}
+
+.five .txt-time .fa {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.five .red-part .txt-time {
+    color: #dd3f57;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.five .child-content {
+    margin-top: 30px;
+}
+
+.five .box-content .child-content:first-child {
+    margin-top: 0;
+}
+
+.five .violet-part {
+    width: 100%;
+    border-right: 20px solid #7e2fa5;
+    height: auto;
+    padding: 0;
+}
+
+.five .violet-part .icon-title {
+    background-color: #7e2fa5;
+}
+
+.five .violet-part .div-title {
+    color: #7e2fa5;
+}
+
+.five .violet-part .box-content {
+    border-color: #7e2fa5;
+}
+
+.five .mt10 {
+    margin-top: 10px;
+}
+
+.five .child-content {
+    position: relative;
+}
+
+.five .pos-name {
+    color: #000000;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.five .box-content:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 0px;
+    background-color: #FFFFFF;
+}
+
+.five .div-title > span {
+    display: block;
+}
+
+.five .violet-part .box-content .child-content,
+.five .blue-part .box-content .child-content,
+.five .green2-part .box-content .child-content {
+    margin-top: 25px;
+}
+
+.five .green2-part .box-content .child-content:first-child,
+.five .blue-part .box-content .child-content:first-child {
+    margin-top: 25px;
+}
+
+.five .violet-part .box-content .child-content:first-child {
+    margin-top: 30px;
+}
+
+.five .box-content .child-content:first-child {
+    margin-top: 0px;
+}
+
+.five .moc-time {
+    position: absolute;
+    left: -240px;
+    text-align: right;
+    width: 160px;
+    text-transform: capitalize;
+}
+
+.five .moc-time:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: -45px;
+    top: 7px;
+    background-color: #000000;
+}
+
+.five .violet-part .moc-time {
+    color: #7e2fa5;
+}
+
+.five .violet-part .moc-time:before {
+    background-color: #7e2fa5;
+}
+
+.five .blue-part .moc-time:before {
+    background-color: #2783cf;
+}
+
+.five .blue-part .box-content {
+    border-color: #2783cf;
+}
+
+.five .blue-part .div-title {
+    color: #2783cf;
+}
+
+.five .blue-part .icon-title {
+    background-color: #2783cf;
+}
+
+.five .mt15a {
+    margin-top: 15px;
+}
+
+.five .blue-part {
+    width: 100%;
+    border-right: 20px solid #2783cf;
+    height: auto;
+    padding: 0;
+}
+
+.five .blue-part .moc-time {
+    color: #2783cf;
+}
+
+.five .orange-part .moc-time:before {
+    background-color: #d89404;
+}
+
+.five .orange-part .box-content {
+    border-color: #d89404;
+}
+
+.five .orange-part .div-title {
+    color: #d89404;
+}
+
+.five .orange-part .icon-title {
+    background-color: #d89404;
+}
+
+.five .orange-part {
+    width: 100%;
+    border-right: 20px solid #d89404;
+    height: auto;
+    padding: 0;
+}
+
+.five .orange-part .txt-time {
+    color: #d89404;
+}
+
+.five .addr-time {
+    width: 160PX;
+    float: left;
+}
+
+.five .green-part .moc-time:before {
+    background-color: #63a25b;
+}
+
+.five .green-part .box-content {
+    border-color: #63a25b;
+}
+
+.five .green-part .div-title {
+    color: #63a25b;
+}
+
+.five .green-part .icon-title {
+    background-color: #63a25b;
+}
+
+.five .green-part {
+    width: 100%;
+    border-right: 20px solid #63a25b;
+    height: auto;
+    padding: 0;
+}
+
+.five .green-part .addr-time .fa {
+    font-size: 12px;
+    color: #63a25b;
+    margin-right: 5px;
+    width: 12px;
+    float: left;
+}
+
+.five .des-respon .tit-respon {
+    color: #999999;
+    width: 105px;
+}
+
+.five .des-respon td {
+    padding: 5px 0;
+    vertical-align: top;
+}
+
+.five .des-respon {
+    margin-top: 5px;
+}
+
+.five .green2-part .moc-time:before {
+    background-color: #0fa789;
+}
+
+.five .green2-part .box-content {
+    border-color: #0fa789;
+}
+
+.five .green2-part .div-title {
+    color: #0fa789;
+}
+
+.five .green2-part .icon-title {
+    background-color: #0fa789;
+}
+
+.five .green2-part {
+    width: 100%;
+    border-right: 20px solid #0fa789;
+    height: auto;
+    padding: 0;
+}
+
+.five .green2-part .moc-time {
+    color: #0fa789;
+}
+
+.five .skill-tit {
+    width: 84px;
+    float: left;
+}
+
+.five .list-skill > .child-content {
+    width: 49%;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 20px;
+    float: left;
+}
+
+.five .list-skill {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.five .skill-tit {
+    color: #000000;
+}
+
+.five .div-input {
+    width: 180px;
+    float: left;
+    padding-right: 20px;
+}
+
+.five .fcv.fcv-la {
+    border: 4px solid #dd3f57;
+    display: inline-block;
+    margin: 0 -4px 0 0;
+    padding: 0;
+    width: 40px;
+    cursor: pointer;
+}
+
+.five .fcv.fcv-la-o {
+    border: 4px solid #f1f1f1;
+    display: inline-block;
+    margin: 0 -4px 0 0;
+    padding: 0;
+    width: 40px;
+    cursor: pointer;
+}
+
+/*.five .div-input .fcv.fcv-la:first-child {
+    border-radius: 8px 0 0 8px;
+}*/
+
+/*.five .div-input .fcv-la:last-child,
+.five .div-input .fcv-la-o:last-child {
+    border-radius: 0 8px 8px 0;
+}*/
+.five .fcv.fcv-la:first-child, .five .fcv.fcv-la-o:first-child {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.five .fcv.fcv-la:last-of-type, .five .fcv.fcv-la-o:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.five .tb-info tr td:nth-child(3) .fa {
+    left: 4px;
+}
+
+.five h1,
+.five h2,
+.five h3,
+.five h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.five .child-content > p {
+    /*text-transform: capitalize;*/
+}
+
+.five .txt-time {
+    text-transform: capitalize;
+}
+
+.five .tb-info tr:first-child {
+    text-transform: capitalize;
+}
+
+.five .cvp-more {
+    margin: 30px;
+}
+
+.five .sub-child-box {
+    top: -40px;
+}
+
+.five #skills .box-content .child-content:first-child {
+    margin-top: 20px;
+}
+.five #language .box-content .child-content:first-child {
+    margin-top: 20px;
+}
+
+/*.five .div-input .fcv:nth-child(4):hover {
+    border-radius: 0 4px 4px 0;
+}*/
+
+.five .addr-time .fa {
+    margin-top: 3px;
+    float: left;
+}
+
+.five .addr-time > span {
+    float: left;
+    width: 135px;
+}
+
+.five .txt-time .fa {
+    margin-top: 3px;
+    float: left;
+}
+
+.five .txt-time > span {
+    float: left;
+}
+
+.five .txt-edit {
+    line-height: 24px;
+}

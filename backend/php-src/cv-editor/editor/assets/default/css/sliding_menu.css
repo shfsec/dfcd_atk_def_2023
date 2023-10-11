@@ -1,0 +1,99 @@
+#sliding_menu_js{
+	position: fixed;
+	height: 100%;
+	width: 250px;
+	right: -300px;
+	/*right: 0px;*/
+	top: 50px;
+	background: #FFFFFF;
+	overflow: auto;
+	color: #fff;
+	z-index: 100;
+	text-align: center;
+    -webkit-box-shadow: 0px 1px 2px 2px #cccccc;
+    box-shadow: 0px 1px 2px 2px #cccccc;
+   /* filter:
+    progid:DXImageTransform.Microsoft.Shadow(color=#bcbcbc,direction=-90,strength=4);*/
+    behavior: url(css3pie/PIE.htc);
+}
+
+
+/* Header */
+#sliding_menu_js .header{
+	position: relative;
+}
+
+/* Logo */
+#sliding_menu_js img{
+}
+
+/* Titulo */
+#sliding_menu_js h3{
+}
+
+#sliding_menu_js_btn h3{
+	font-size: 14px;
+}
+
+/* Menu - Items */
+#sliding_menu_js ul{
+	padding: 0px;
+}
+
+#sliding_menu_js ul li{
+	list-style-type: none;
+	border-bottom: 1px solid #dddddd;
+
+}
+
+#sliding_menu_js ul li a{
+	color: #000;
+	padding: 15px 5px;
+	display: block;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+/* Boton */
+#sliding_menu_js_btn{
+	text-align: center;
+	width: 100%;
+	height: 24px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 999;
+	background-image: url(../images/nganhnghe.png);
+   
+	background-repeat: no-repeat;
+    top: 16px;
+    right: 12px;
+    cursor: pointer;
+}
+#sliding_menu_js_btn:hover, #sliding_menu_js_btn.active{
+    /*background-position: -312px -120px;*/
+    
+}
+
+/* Over */
+#sliding_menu_js_over{
+	/*background: rgba(3,3,3,.5);*/
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 9;
+	display: none;
+}
+
+/* Sub Menu */
+#sliding_menu_js ul li ul{
+	background: #fcfcfc;
+	color: #666;
+}
+#sliding_menu_js ul li ul li:first-child{
+	border-top: 1px solid #dddddd;
+}
+#sliding_menu_js ul li ul li a{
+	padding: 10px 5px;
+}

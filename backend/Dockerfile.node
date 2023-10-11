@@ -1,0 +1,24 @@
+FROM node:alpine
+
+RUN apk add --no-cache tzdata
+ENV TZ Asia/Ho_Chi_Minh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# ensure www-data user exists
+RUN set -eux; \
+	adduser -u 82 -D -S -G www-data www-data
+# 82 is the standard uid/gid for "www-data" in Alpine
+# https://git.alpinelinux.org/aports/tree/main/apache2/apache2.pre-install?h=3.14-stable
+# https://git.alpinelinux.org/aports/tree/main/lighttpd/lighttpd.pre-install?h=3.14-stable
+# https://git.alpinelinux.org/aports/tree/main/nginx/nginx.pre-install?h=3.14-stable
+
+RUN npm install --omit=dev --force -g npm && npm install --omit=dev --force -g yarn
+
+WORKDIR /opt
+COPY ./package.json /opt/
+
+RUN yarn add --production --no-lockfile --verbose pm2
+# RUN yarn install --production --no-lockfile
+# RUN npm install --omit=dev --loglevel verbose
+
+RUN addgroup root www-data

@@ -1,0 +1,462 @@
+/* Cvpro 10 */
+.cvp-content.ten {
+    width: 800px;
+    height: auto;
+    color: #000000;
+    padding: 0px;
+    background-color: #FFFFFF;
+     font-size: 15px;
+}
+
+.ten h1,
+.ten h3,
+.ten h4 {
+    text-transform: capitalize;
+}
+
+.ten h2 {
+    text-transform: uppercase;
+}
+
+.ten .list-info > li:nth-child(1),
+.ten .list-info > li:nth-child(2),
+.ten .list-info > li:nth-child(6) {
+    text-transform: capitalize;
+}
+
+.ten .capi {
+    text-transform: capitalize;
+}
+
+.ten .cvp-left {
+    width: 210px;
+    float: left;
+}
+
+.ten .cvp-right {
+    width: 510px;
+    float: left;
+    padding-left: 45px;
+}
+
+.ten .cvp-box {
+    padding: 0 40px;
+    margin: 0;
+}
+
+.ten .bg-color {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    color: #FFFFFF;
+    background-color: #101a32;
+    margin-bottom: 13px;
+}
+
+.ten .user-name {
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 18px;
+    color: #FFFFFF;
+}
+
+.ten .user-job {
+    color: #ff9900;
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 3px;
+}
+
+.ten .list-info > li {
+    padding: 6px 0;
+     font-family: Roboto,sans-serif;
+     font-size: 15px;
+    color: #FFFFFF;
+    padding-left: 32px;
+    position: relative;
+    list-style: none;
+}
+
+.ten .list-info > li .fa {
+    position: absolute;
+    left: 0;
+    top: 7px;
+     font-size: 15px;
+    color: #ff9900;
+}
+
+.ten .list-info > li > span {
+    display: block;
+}
+
+.ten .list-info {
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.ten .txt-intro {
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'Noto Serif', serif;
+    margin-top: 5px;
+    line-height: 28px;
+}
+
+.ten .line-color {
+    width: 80px;
+    margin: 0;
+    height: 2px;
+    background-color: #ff9900;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+.ten .div-title {
+    left: 65px;
+    color: #101a32;
+    position: relative;
+    margin-top: 43px;
+    font-weight: 900;
+    font-size: 18px;
+    z-index: 9;
+    width: 145px;
+}
+
+.ten .relative {
+    position: relative;
+}
+
+.ten .tit-num {
+    position: absolute;
+    font-size: 72px;
+    color: #ff9900;
+    top: -45px;
+    left: 0;
+    font-weight: 900;
+    width: 85px;
+}
+
+.ten .div-subject {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ten .list-active {
+    padding-bottom: 10px;
+}
+
+.ten .timeline {
+    color: #FFFFFF;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    background-color: #101a32;
+    margin-bottom: 15px;
+    margin-top: 42px;
+    text-transform: uppercase;
+}
+
+.ten .com-name {
+    color: #ff9900;
+     font-size: 15px;
+    font-weight: 900;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.ten .addr-time .fa {
+    font-size: 12px;
+    color: #ff9900;
+    float: left;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.ten .addr-time > span {
+    float: left;
+}
+
+.ten .addr-time {
+    width: 165px;
+    float: left;
+    margin-top: 5px;
+}
+
+.ten .txt-detail {
+    margin-top: 10px;
+}
+
+.ten .col-first {
+    width: 210px;
+    float: left;
+    padding: 0;
+}
+
+.ten .col-2nd {
+    width: 300px;
+    float: left;
+    padding: 0 45px;
+}
+
+.ten .col-3rd {
+    width: 210px;
+    float: left;
+    padding: 0;
+}
+
+.ten .tit-color {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff9900;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.ten .div-txt-f {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.ten .box-content .child-content .txt-bor {
+    border-bottom: 1px solid #293c69;
+    padding-bottom: 15px;
+}
+
+.ten .box-content .child-content:last-child .txt-bor {
+    border-bottom: none;
+}
+
+.ten .icon-txt-f {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 28px;
+    color: #ff9900;
+}
+
+.ten .icon-ribbon {
+    background: url("../img/icon/icon-ribbon-orange.png") center center no-repeat;
+    background-size: 27px auto;
+    display: inline-block;
+    height: 32px;
+    width: 27px;
+}
+
+.ten .icon-ribbon-award {
+    background: url("../img/icon/icon-ribbon-award-orange.png") center center no-repeat;
+    background-size: 23px auto;
+    display: inline-block;
+    height: 28px;
+    width: 23px;
+}
+
+.ten .txt-year {
+    color: #ffffff;
+}
+
+.ten .ls-partitions {
+    margin-bottom: 30px;
+}
+
+.ten .partitions {
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #293c69;
+}
+
+.ten .ls-partitions .child-content:last-child .partitions {
+    border-bottom: none;
+}
+
+.ten .partitions span:first-child {
+    display: inline-block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    float: left;
+}
+
+.ten .partitions span:last-child {
+    display: inline-block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    float: left;
+     font-size: 15px;
+    text-align: right;
+    color: #ff9900;
+}
+
+.ten #skills .partitions span:first-child,
+.ten #skills .partitions span:last-child {
+    width: 105px;
+}
+
+.ten .partitions span:last-child .fa {
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.ten .partitions > i:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.ten .partitions .bor-first {
+    border-radius: 4px 0 0 4px;
+}
+
+/*.ten .partitions > i:last-child {
+    border-radius: 0 4px 4px 0;
+}*/
+
+.ten .fcv.fcv-la {
+    border: none;
+    display: inline-block;
+    margin: 0 -6px 0 0;
+    padding: 0;
+    width: 52.5px;
+    cursor: pointer;
+    height: 15px;
+    background: #ff9900;
+}
+
+.ten .fcv.fcv-la-o {
+    border: none;
+    display: inline-block;
+    margin: 0 -6px 0 0;
+    padding: 0;
+    width: 52.5px;
+    cursor: pointer;
+    height: 15px;
+    background: #cd8a24;
+}
+
+.ten .col-3rd .partitions {
+    padding: 4px 0;
+    margin: 0;
+    border-bottom: none;
+    position: relative;
+}
+
+.ten .lang-name {
+    position: relative;
+    padding: 0;
+    color: #ffffff;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.ten .pl40 {
+    padding-left: 40px;
+}
+
+.ten svg {
+    height: 162px;
+    width: 191px;
+}
+
+.ten path {
+    stroke: #ff9900;
+    fill: none;
+    stroke-width: 32px;
+}
+
+.ten .svg-block {
+    position: relative;
+    left: -22px;
+}
+
+.ten .avatar-user {
+    position: absolute;
+    left: 5px;
+    top: 9px;
+}
+
+.ten .avatar-user svg {
+    height: 130px;
+}
+
+.ten .row-bottom {
+    padding: 0 40px;
+    margin: 0;
+}
+
+.ten .row-bottom .cvp-box {
+    padding: 0;
+}
+
+.ten .div-text {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+}
+
+.ten .partitions-pj {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.ten .partitions-pj li.left {
+    float: left;
+    display: block;
+    width: 100px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    display: inline-block;
+    color: #999999;
+}
+
+.ten .partitions-pj li.right {
+    float: left;
+    width: 280px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.ten .ls-partitions .child-content {
+    padding: 0;
+}
+
+.ten #skills .sub-child-box {
+    right: 0px;
+    width: 220px;
+    float: right;
+    text-align: right;
+}
+
+.ten #language .sub-child-box {
+    right: 0px;
+    width: 220px;
+    float: right;
+    text-align: right;
+}
+
+/*.ten .partitions > span i:nth-child(4):hover,
+.ten .partitions > span i:nth-child(4) {
+    border-radius: 0 4px 4px 0;
+}*/
+.ten .partitions .fcv.fcv-la:first-child, .ten .partitions .fcv.fcv-la-o:first-child {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.ten .partitions .fcv.fcv-la:last-of-type, .ten .partitions .fcv.fcv-la-o:last-of-type {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.ten .svg-block .icon-hexago2-1 {
+    font-size: 135px;
+    color: #ff9900;
+    left: 29px;
+    position: relative;
+    top: -3px;
+    height: 140px;
+}

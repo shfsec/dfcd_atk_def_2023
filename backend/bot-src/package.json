@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "author": "vinhjaxt",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "undici": "^5.24.0",
+    "mysql2": "^3.6.1",
+    "uuid": "^9.0.1",
+    "@fastify/static": "^6.11.2",
+    "fastify": "^4.23.2",
+    "@faker-js/faker": "^8.1.0",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "playwright": "=1.38.0"
+  }
+}

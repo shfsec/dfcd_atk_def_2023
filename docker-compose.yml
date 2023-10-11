@@ -1,0 +1,186 @@
+version: '3.5'
+services:
+    public-proxy:
+        image: public-proxy:v1
+        hostname: public-service
+        build:
+            dockerfile: Dockerfile
+            context: './public-proxy'
+            network: host
+        restart: always
+        volumes:
+            - ./public-proxy/.ssh:/root/.ssh:ro
+            - ./public-proxy/runtime/:/runtime:ro
+            - ./public-proxy/site-enabled:/etc/nginx/sites-enabled
+        ports:
+            - "8080:80"
+            - "2222:22"
+        command: /runtime/endpoint.sh
+        networks:
+            - proxy-public
+        depends_on:
+            - service
+    
+    service:
+        image: app-proxy:v1
+        build:
+            dockerfile: Dockerfile.proxy
+            context: ./backend
+            network: host
+        restart: unless-stopped
+        read_only: true
+        volumes:
+            - ./backend/.run:/home/run:ro
+            - ./backend/secret_check:/secret_check:ro
+            - ./backend/proxy/build:/tmp/proxy:ro
+        command: /tmp/proxy/proxy -l :80
+        networks:
+            - proxy-public
+
+    node:
+        image: app-node:v1
+        build:
+            dockerfile: Dockerfile.node
+            context: ./backend
+            network: host
+        restart: unless-stopped
+        command: sh -c '(node /opt/node_modules/pm2/bin/pm2-runtime start ./pm2-clean.json &) && chmod -R 777 /tmp/ && su www-data -s /bin/sh -c "node /opt/node_modules/pm2/bin/pm2-runtime start ./pm2.json"'
+        working_dir: '/opt/src'
+        dns:
+            - 1.1.1.1
+            - 1.0.0.1
+            - 8.8.8.8
+            - 8.8.4.4
+        volumes:
+            - ./flag:/flag:ro
+            - ./backend/frontend-dist:/home/public_html:ro
+            - ./backend/src/files:/opt/src/files:rw
+            - ./backend/src:/opt/src:ro
+            - ./backend/.run/node:/tmp/.run:rw
+            - ./backend/secret_dir:/secret_dir:ro
+        networks:
+            - app-internal
+            - app-public
+        depends_on:
+            - db
+        read_only: true
+        tmpfs:
+            - /tmp:uid=999,gid=999
+            - /root/.pm2:uid=999,gid=999
+            - /home/www-data/.pm2:uid=82,gid=82
+
+    bot:
+        image: app-bot:v1
+        build:
+            dockerfile: Dockerfile.bot
+            context: ./backend
+            network: host
+        restart: unless-stopped
+        command: node /opt/node_modules/pm2/bin/pm2-runtime start ./pm2.json
+        working_dir: '/opt/src'
+        dns:
+            - 1.1.1.1
+            - 1.0.0.1
+            - 8.8.8.8
+            - 8.8.4.4
+        volumes:
+            - ./flag:/flag:ro
+            - ./bot_config:/bot_config:ro
+            - ./backend/src/files:/tmp/files:rw
+            - ./backend/bot-src:/opt/src:ro
+            - ./backend/.run:/tmp/.run:rw
+            - ./backend/secret_dir:/secret_dir:rw
+            - ./backend/secret_check:/secret_check:rw
+        networks:
+            - bot-network
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        depends_on:
+            - db
+        read_only: true
+        tmpfs:
+            - /tmp:uid=999,gid=999
+            - /root/.pm2:uid=999,gid=999
+
+    php:
+        image: app-php:v1
+        build:
+            dockerfile: Dockerfile.php
+            context: ./backend
+            network: host
+        restart: unless-stopped
+        entrypoint: ''
+        command: sh -c '(/usr/local/bin/php /var/www/html/clean?.php &) && (while true; do rm -f /tmp/.run/http.sock; /proxy 127.0.0.1:80 /tmp/.run/http.sock; done &) && docker-php-entrypoint apache2-foreground'
+        working_dir: /var/www/html
+        dns:
+            - 1.1.1.1
+            - 1.0.0.1
+            - 8.8.8.8
+            - 8.8.4.4
+        volumes:
+            - ./flag:/flag:ro
+            - ./backend/php-src/ports.conf:/etc/apache2/ports.conf:ro
+            - ./backend/.run/php:/tmp/.run:rw
+            - ./backend/secret_dir:/secret_dir:ro
+            - ./backend/php-src:/var/www/html:ro
+            - ./backend/php-src/cv-editor/files:/var/www/html/cv-editor/files:rw
+            - ./backend/php-src/cv-editor/files:/var/www/html/image-sharing/file_contents:rw
+        networks:
+            - app-internal
+            - app-public
+        depends_on:
+            - db
+        read_only: true
+        tmpfs:
+            - /tmp:uid=999,gid=999
+            - /var/run:uid=999,gid=999
+
+    db:
+        image: mysql:8.0
+        restart: unless-stopped
+        environment:
+            - MYSQL_ROOT_PASSWORD=chien_than_huy_hoai_ctf
+            - MYSQL_USER=local_user
+            - MYSQL_PASSWORD=chien_than_huy_hoai_ctf
+            - MYSQL_DATABASE=local_db
+        volumes:
+            - .data/mysql:/var/lib/mysql:rw
+            - ./backend/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+        networks:
+            - app-internal
+            - bot-network
+        # This command is required to set important mysql defaults
+        command:
+            [
+                mysqld,
+                --character-set-server=utf8mb4,
+                --collation-server=utf8mb4_unicode_ci,
+                --wait_timeout=28800
+            ]
+        read_only: true
+        tmpfs:
+            - /run/mysqld:uid=999,gid=999
+            - /tmp
+
+networks:
+    bot-network:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.30.16.0/26
+    proxy-public:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.30.16.64/26
+    app-public:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.30.16.128/26
+    app-internal:
+        internal: true
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.30.16.192/26

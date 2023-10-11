@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CUSTOM YOUR CV</title>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="icon" type="image/png" href="editor/assets/default/images/favicon.png" />
+
+    <!-- css all -->
+    <link href="editor/assets/default/css/normalize.min.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/ionicons.min.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/fonts.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/bootstrap.min.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/select2.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/sliding_menu.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/checkbox/all.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/mfb.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/style_menu.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/styles.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/default.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/main.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/jquery-ui.min.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+    <link href="editor/assets/default/css/main2.css?ver=48" rel="stylesheet" property='stylesheet' type='text/css' media='all'>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="editor/assets/default/js/html5shiv.min.js?ver=48"></script>
+    <script src="editor/assets/default/js/respond.min.js?ver=48"></script>
+    <link href="editor/assets/default/css/ie.css?ver=48" rel="stylesheet">
+    <![endif]-->
+
+    <script type="text/javascript">
+        function addListener(obj, eventName, listener) {
+            if( obj.addEventListener ) {
+                obj.addEventListener( eventName, listener, false );
+            } else {
+                obj.attachEvent("on" + eventName, listener);
+            }
+        }
+    </script>
+
+
+    <link href="editor/assets/css/cv-style.css?v=1" rel="stylesheet" type="text/css" media="all">
+    <link href="editor/assets/css/datepicker.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="editor/assets/css/cv-editor.css?v=2" rel="stylesheet" type="text/css" media="all">
+
+</head>
+<body class="no_scroll page_on_load">
+<script>
+window.currentCV = '5';
+</script>
+<div id="toppage"></div>
+<div class="container-fluid nopadding">
+
+    <!-- content -->
+    <div class="pos_relative content_body">
+        <!-- col main -->
+        <div class="show-content w_100 ">
+            <div id="cols-right" class="bg_grey">
+                <div class="content_cols-right pt_16 pl_24 pb_24" style="margin: 0 auto !important;">
+
+      <div class="clearfix"></div>
+      <!-- MAIN CONTENT START HERE -->
+      <h1 class="title_text_line mt24 fwb">
+          <span class="text-tim-nhat uppercase">Tạo / Sửa CV của bạn</span>
+      </h1>
+      <div class="box_tab bg_white box_shadow pt_16 pl_14 pr_14 pb_16 mb_24">
+          <div class="w_100">
+             
+              <a href="javascript:void(downloadCV());" class="btn floatLeft button-blue">
+                  <i class="icon-24-white icon-download-white"></i>
+                  <span class="span-button-11 ml2">TẢI VỀ</span>
+              </a>
+
+              <div class="clearfix"></div>
+              <hr />
+
+              <div class="row">
+                  <div class="w_33 floatLeft">
+                      <p>Màu sắc</p>
+                      <div id="cv-editor-switch-colors" class="cv-color-switcher theme-dark">
+                          <a class="cv-color-switch" data-color="#000000"><span></span></a>
+                          <a class="cv-color-switch" data-color="#4a1a67"><span></span></a>
+                          <a class="cv-color-switch" data-color="#26a69a"><span></span></a>
+                          <a class="cv-color-switch" data-color="#dd3f57"><span></span></a>
+                          <a class="cv-color-switch" data-color="#2a6598"><span></span></a>
+                      </div>
+                  </div>
+                  <div class="w_33 floatLeft">
+                      <p>Cỡ chữ</p>
+                      <div class="div-range div-font-size">
+                          <i class="icon-24-v2 icon-text-mini-A floatLeft"></i>
+                          <div class="floatLeft div-slider-fontsize">
+                              <!-- <input id="set-fontsize" type="text"/> -->
+                              <input type="range" class="range range-fs" min="-2" max="4" step="2" value="0" id="cv-adjust-fontsize">
+                          </div>
+                          <i class="icon-24-v2 icon-text-big-A floatLeft"></i>
+                      </div>
+                  </div>
+                  <div class="w_33 floatLeft">
+                      <p>Khoảng cách dòng</p>
+                      <div class="div-range div-line-height">
+                          <i class="icon-24-v2 icon-lineheight-mini-A floatLeft"></i>
+                          <div class="floatLeft div-slider-line-height">
+                              <!-- <input id="set-lineheight" type="text"/> -->
+                              <input type="range" class="range range-lh" min="-0.3" max="0.9" step="0.3" value="0" id="cv-adjust-lineheight">
+                          </div>
+                          <i class="icon-24-v2 icon-lineheight-big-A floatLeft"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="box_tab bg_white box_shadow mb_24">
+          <div class="w_100">
+              <div id="cv-editor-1" class="cv-editor" data-url=""></div>
+          </div>
+      </div>
+
+      <!-- MAIN CONTENT END HERE -->
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="editor/assets/default/js/jquery.min.js?ver=48"></script>
+<script>
+jQuery('#cv-editor-1').attr('data-url','cv-'+(window['currentCV']||'5')+'.html').data('url','cv-'+(window['currentCV']||'5')+'.html');
+</script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="editor/assets/default/js/bootstrap.min.js?ver=48"></script>
+<script src="editor/assets/default/js/jquery.mobile.custom.min.js?ver=48"></script>`
+<script type="text/javascript" src="editor/assets/default/js/mbExtruder.js?ver=48"></script>
+<script src="editor/assets/default/js/jquery.menu-aim.js?ver=48"></script> <!-- menu aim -->
+<script src="editor/assets/default/js/modernizr.js?ver=48"></script> <!-- Modernizr -->
+<script type="text/javascript" src="editor/assets/default/js/select2.min.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/icheck.min.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/enscroll-0.6.1.min.js?ver=48"></script><!-- scroll bar -->
+<script type="text/javascript" src="editor/assets/default/js/sliding_menu.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/style_menu.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/common.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/main.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/main2.js?ver=48"></script>
+<script type="text/javascript" src="editor/assets/default/js/slick/slick.js"></script>
+<script type="text/javascript" src="editor/assets/default/js/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="editor/assets/js/datepicker.min.js?v=1"></script>
+<script type="text/javascript" src="editor/assets/js/main.js?v=3"></script>
+
+<script>
+window['downloadCV'] = function (){
+  var bodyCV = jQuery('#cv-editor-1 > .cv-editor-content').html();
+  var defaultCVURL=jQuery('#cv-editor-1').data('url') || jQuery('#cv-editor-1').attr('data-url');
+  if(!bodyCV || !defaultCVURL) return 0&!alert('Lỗi, xin thử lại sau.');
+  jQuery.ajax({
+    url: defaultCVURL,
+    success: function (html){
+      var document = window.document;
+      var newDoc = document.open("text/html", "replace");
+      newDoc.write(html);
+      jQuery(newDoc).find('body').html(bodyCV).find('[contenteditable]').prop('contenteditable',false);
+      newDoc.close();
+
+      var html = new Blob([jQuery('html')[0].outerHTML])
+      var fd = new FormData()
+      fd.append('_', html, Date.now()+'.html')
+      fetch('./pdf.php', {
+        method: 'POST',
+        headers: {
+            authorization: localStorage.getItem('access_token') ? 'Bearer ' + localStorage.getItem('access_token') : undefined
+        },
+        body: fd
+      }).then(r => r.text()).then(r => {
+        location.href = r
+      })
+    },
+    complete: function (){
+      downloadingCV=false;
+    },
+    error: function (){
+      alert('Lỗi kết nối đến server.');
+    }
+  });
+};
+</script>
+
+<!--[if lt IE 8]>
+<link href="editor/assets/default/css/ie7.css?ver=48" rel="stylesheet">
+<![endif]-->
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "main": "src/server.mjs",
+  "type": "module",
+  "author": "vinhjaxt",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "@as-integrations/fastify": "^2.1.0",
+    "@fastify/compress": "^6.4.0",
+    "@fastify/cors": "^8.3.0",
+    "@fastify/helmet": "^11.1.0",
+    "@fastify/rate-limit": "^8.0.3",
+    "@fastify/static": "^6.11.2",
+    "argon2": "^0.31.1",
+    "dataloader-sequelize": "^2.3.3",
+    "fastify": "^4.23.2",
+    "google-auth-library": "^9.0.0",
+    "graphql": "^16.8.0",
+    "graphql-relay": "^0.10.0",
+    "graphql-sequelize": "^9.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mp3tag.js": "^3.7.0",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0",
+    "vm2": "=3.9.15",
+    "xml2js": "^0.6.2"
+  }
+}
